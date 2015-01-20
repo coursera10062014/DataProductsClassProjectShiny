@@ -7,12 +7,18 @@ shinyUI(pageWithSidebar(
                 value=c(1880,2014))
   ),
   mainPanel(
+    h3("How to use this tool"),
+    div(paste("Use the slider at the left to pick a date range.  ",
+              "The plot here and the slope estimate below will ",
+              "automatically update.")),
+    h3("Plot"),
     plotOutput("oPlot"),
     div(paste(
       "The plot above plots Northern Hemisphere mean annual temperature ",
       "over both land and sea, compared to the period 1951-1980.  The ",
       "units are expressed in hundredths of a degree Fahrenheit as the ",
       "offset from the baseline.")),
+    h3("Prediction"),
     div(paste("Based on the period you selected, a linear fit suggests ",
               "that the temperature is rising approximately this many ",
               "hundredths of a degree celcius every year:")),
